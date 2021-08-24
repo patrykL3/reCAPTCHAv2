@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>ReCaptchaV2</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/4.0/examples/signin/signin.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+<div class="container">
+    <form class="form-signin" method="post" action="#" th:action="@{/next}">
+        <h2 class="form-signin-heading text-center mb-5">ReCaptchaV2 Example</h2>
+
+        <div class="g-recaptcha" data-sitekey="6LfNEhkcAAAAAHkU5PchGXiujwKWK3uNjl2vnsI2"></div>
+
+        <p class="text-danger text-center mt-2" th:if="${message != null}" th:text="${message}"></p>
+
+        <button class="btn btn-lg btn-primary btn-block mt-3" type="submit">Post Form</button>
+    </form>
+</div>
+</body>
+</html>
